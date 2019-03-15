@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>meme voting</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 text-center div-center">
+
+          <div id="title-div">
+            <img src="img/joy.png">
+            <img src="img/vote.png">
+            <h1>Meme Voting</h1>
+          </div>
+
+          <div id="message">
+            <div id="loader" class="alert alert-secondary">
+              <img src="img/loading.gif">
+              <div><b>LOADING</b></div>
+            </div>
+          </div>
+
+          <div>
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" id="regUrl" class="form-control" placeholder="Url of the meme">
+                </div>
+                <div class="col">
+                  <input type="text" id="regName" class="form-control" placeholder="Your name">
+                </div>
+              </div>
+            </form>
+
+            <button id="registerBtn" class="btn btn-block">Register</button>
+          </div>
+
+          <div id="memeBody">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script id="template" type="x-tmpl-mustache">
+      {{#memeArray}}
+        <div class="card">
+          <h5 class="card-title">{{creatorName}}</h5>
+          <img class="card-img-top" src="{{memeUrl}}" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{votes}} ættos</h6>
+            <input type="number" class="form-control" placeholder="Amount" id={{index}}>
+            <button class="btn voteBtn btn-block" id={{index}}>VOTE</button>
+          </div>
+        </div>
+      {{/memeArray}}
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js">
+    </script>
+    <script src="index.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  </body>
+</html>
