@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <title>meme voting</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 text-center div-center">
+
+          <div id="title-div">
+            <img src="img/joy.png">
+            <img src="img/vote.png">
+            <h1>Meme Voting</h1>
+          </div>
+
+          <div id="message">
+            <div id="loader" class="alert alert-secondary">
+              <img src="img/loading.gif">
+              <div><b>LOADING</b></div>
+            </div>
+          </div>
+
+          <div>
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" id="regUrl" class="form-control" placeholder="Url of the meme">
+                </div>
+                <div class="col">
+                  <input type="text" id="regName" class="form-control" placeholder="Your name">
+                </div>
+              </div>
+            </form>
+
+            <button id="registerBtn" class="btn btn-block">Register</button>
+          </div>
+
+          <div id="memeBody">
+            <div class="card">
+              <h5 class="card-title">Moritz</h5>
+              <img class="card-img-top" src="https://pbs.twimg.com/media/C4Vu1S0WYAA3Clw.jpg" alt="Card image cap">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">12 ættos</h6>
+                <input type="number" class="form-control" placeholder="Amount" id=1>
+                <button class="btn voteBtn btn-block" id=1>VOTE</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
