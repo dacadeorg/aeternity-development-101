@@ -35,6 +35,5 @@ $('#registerBtn').click(async function(){
     index: memeArray.length+1,
     votes: 0
   })
-  //update and render meme
   renderMemes();
 });
