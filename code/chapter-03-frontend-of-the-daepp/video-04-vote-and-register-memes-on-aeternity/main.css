@@ -1,0 +1,55 @@
+body{
+  background-color:#311B58;
+}
+
+.div-center {
+  margin: 0 auto;
+}
+
+#title-div {
+  margin: 1em;
+  color: white;
+}
+
+img{
+  width:40px;
+}
+
+#message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  z-index: 1;
+}
+
+#loader {
+  margin: 1em;
+  color:#F7296E;
+  display: none;
+}
+
+.inputForm{
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.btn{
+  background-color: #F7296E;
+  border-color: #F7296E;
+  color:white;
+  margin-top: 1em;
+}
+
+.card{
+  margin-top: 3em;
+  padding-top: 0.5em;
+  background-color: #F5F5F5;
+  border: 0.5em solid #F5F5F5;
+}
+
+.container{
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
+}
