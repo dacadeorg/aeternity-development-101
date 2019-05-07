@@ -58,7 +58,7 @@ window.addEventListener('load', async () => {
   console.log('calledGet', calledGet);
 
   const decodedGet = await calledGet.decode().catch(e => console.error(e));
-  console.log('decodedGet', decodedGet.value);
+  console.log('decodedGet', decodedGet);
 
   renderMemes();
 
