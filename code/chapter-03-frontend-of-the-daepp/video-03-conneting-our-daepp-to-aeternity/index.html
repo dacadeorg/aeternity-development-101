@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Meme Voting</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 text-center div-center">
+
+          <div id="title-div">
+            <img src="img/joy.png">
+            <img src="img/vote.png">
+            <h1 style="color:white;">Meme Voting</h1>
+          </div>
+
+          <!-- div for entering messages to the user, currently just used by a loading animation. -->
+          <div id="message">
+            <div id="loader" class="alert alert-secondary">
+              <img src="img/loading.gif">
+              <div><b>LOADING</b></div>
+            </div>
+          </div>
+
+          <!-- div for form registration of the meme. We need the url and a name. -->
+          <div>
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" id="regUrl" class="form-control"
+                  placeholder="Url of the meme">
+
+                </div>
+                <div class="col">
+                  <input type="text" id="regName" class="form-control"
+                  placeholder="Your name">
+
+                </div>
+              </div>
+            </form>
+
+            <button id="registerBtn" class="btn btn-block">Register</button>
+          </div>
+
+          <!-- div for form registration of the meme. We need the url and a name. -->
+          <div id="memeBody"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <script id="template" type="x-tmpl-mustache">
+      {{#memeArray}}
+        <div class="card">
+          <h5 class="card-title">{{creatorName}}</h5>
+          <img class="card-img-top" src="{{memeUrl}}" alt="Card image cap">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">{{votes}} ættos</h6>
+            <input type="number" class="form-control" placeholder="Amount" id={{index}}>
+            <button class="btn voteBtn btn-block" id={{index}}>VOTE</button>
+          </div>
+        </div>
+      {{/memeArray}}
+    </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dacadeorg/aeternity-development-101/resources/aepp-sdk.browser.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.js"></script>
+  <script src="index.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"></script>
+  </body>
+</html>
