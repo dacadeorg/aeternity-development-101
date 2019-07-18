@@ -2,10 +2,10 @@ contract MemeVote =
 
   record state = { url : string }
 
-  function init() = { url = "https://pbs.twimg.com/media/DdUAvCRWsAAr8R2.jpg" }
+  entrypoint init() = { url = "https://pbs.twimg.com/media/DdUAvCRWsAAr8R2.jpg" }
 
-  public function getMeme() : string =
+  entrypoint getMeme() : string =
 	state.url
 
-  public stateful function registerMeme(input : string) =
+  stateful entrypoint registerMeme(input : string) =
 	put(state { url = input})
