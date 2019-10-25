@@ -1,5 +1,5 @@
 const contractSource = `
-  contract MemeVote =
+  payable contract MemeVote =
 
     record meme =
       { creatorAddress : address,
@@ -28,14 +28,14 @@ const contractSource = `
     entrypoint getMemesLength() : int =
       state.memesLength
 
-    stateful entrypoint voteMeme(index : int) =
+    payable stateful entrypoint voteMeme(index : int) =
       let meme = getMeme(index)
       Chain.spend(meme.creatorAddress, Call.value)
       let updatedVoteCount = meme.voteCount + Call.value
       let updatedMemes = state.memes{ [index].voteCount = updatedVoteCount }
       put(state{ memes = updatedMemes })
 `;
-const contractAddress ='ct_2WRcJSeKyphdnTqRhjLNMyyk2W2QHRgzpYftMM9KcrBRR57akE';
+const contractAddress ='ct_CxxTpqYdtqhzVjCtggeV4obBtwW6hLjsmTUhWzDXFS417Sqe6';
 var client = null;
 var memeArray = [];
 var memesLength = 0;
